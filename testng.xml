@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+<!-- this is grouping-->
+<!-- 
+<groups>
+ <run>
+   <include name="s.*"></include> 
+ </run>
+</groups>
+-->
+
+
+
+
+  <test thread-count="5" name="Test">
+  <!-- 
+  <groups>
+     <define name="s_group">
+        <include name="sanity"></include>
+        <include name="smoke"></include>
+     </define>
+     
+     
+     <run>
+        <include name="s_group"></include>
+     </run>
+  </groups>
+  -->
+
+
+
+<!-- this is for paramterised testng-->
+
+<!-- from parameter1.java
+i have parameter2.java,where i also used same variable c and d
+so it will use first 2 paramter to print value like 10 and 20
+
+means total 3 prints
+
+and those are globle parameter and we can use local parameter 
+also
+-->
+    <parameter name="c" value="10"></parameter>
+    <parameter name="d" value="20"></parameter>
+  
+    <parameter name="a" value="30"></parameter>
+    <parameter name="b" value="40"></parameter>
+  
+  
+  
+  
+  
+    <classes>
+    
+<!-- uncomment this when use grouping,and  grouping of groups-->
+   <!-- 
+    <class name="TestNg.test1">
+    </class>
+ -->
+ 
+ <!-- -->
+ <class name="TestNg.parameter1">
+ </class>
+ 
+ <class name="TestNg.parameter2">
+ <parameter name="c" value="100"></parameter>
+ <parameter name="d" value="200"></parameter>
+ </class>
+    
+    
+     <!-- if we want to include only 1 method of anyclass-->
+     <!--
+      <class name="TestNg.test1">
+         <methods>
+             <include name="show"></include>
+             <exclude name="display"></exclude>
+             
+         </methods>
+      </class>
+       -->
+       
+  <!-- it will run all starts with show-->
+
+<!-- 
+      <class name="TestNg.test1">
+         <methods>
+             <include name="show.*"></include>
+            
+         </methods>
+      </class>
+-->      
+      
+      
+      
+      <!-- this will include all methods of test2 class-->
+ <!--    
+     <class name="TestNg.test2">
+     
+      </class>
+ -->       
+      
+    
+    
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
