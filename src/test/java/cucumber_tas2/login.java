@@ -82,7 +82,7 @@ WebDriver driver;
 	            By.xpath("//button[@data-qa='login-button']")
 	    );
 
-	    // Scroll to the element
+	    // Scroll to the page
 	    ((JavascriptExecutor) driver)
 	            .executeScript("arguments[0].scrollIntoView({block:'center'});", loginBtn);
 
