@@ -16,7 +16,6 @@ public class locators1 {
 	  driver.get("https://www.facebook.com");
 	  
 	  // by id     
-	  
 //	  WebElement ele= driver.findElement(By.id("email"));
 //	  ele.click();
 	  
